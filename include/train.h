@@ -11,6 +11,7 @@ class Train {
   };
   int countOp; // счетчик шагов (число переходов из вагона в вагон)
   Car *first; // точка входа в поезд (первый вагон)
+  Car *current;
  public:
   Train();
   ~Train();
