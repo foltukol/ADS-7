@@ -23,11 +23,11 @@ void Train::addCar(bool light) {
     first = newCar;
     first->next = first;
     first->prev = first;
-  } else {
-    Car* last = first->prev;
-    last->next = newCar;
-    newCar->prev = last;
-    newCar->next = first;
-    first->prev = newCar;
-  }
+    return;
+  } 
+  Car* last = first->prev;
+  last->next = newCar;
+  newCar->prev = last;
+  newCar->next = first;
+  first->prev = newCar;
 }
