@@ -5,6 +5,18 @@
 
 Train::Train() : countOp(0), first(nullptr) {}
 
+Train::~Train() {
+  if (!first) return;
+  Car* current = first->next;
+  while (current != first) {
+    Car* next = current->next;
+    delete current;
+    current = next;
+  }
+  delete first;
+  first = nullptr;
+}
+
 void Train::addCar(bool light) {
   Car* newCar = new Car{light, nullptr, nullptr};
   if (!first) {
