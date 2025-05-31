@@ -2,3 +2,5 @@
 #include "train.h"
 #include <cstdlib>
 #include <ctime>
+
+Train::Train() : countOp(0), first(nullptr) {}
